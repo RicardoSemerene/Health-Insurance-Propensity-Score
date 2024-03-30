@@ -1,0 +1,11 @@
+Flask==2.2.5
+matplotlib==3.8.0
+numpy==1.26.4
+inflection==0.5.1
+pandas==2.0.3
+psycopg2==2.9.3
+requests==2.31.0
+scikit-learn==1.4.1.post1
+scikit-plot==0.3.7
+scipy==1.11.4
+seaborn==0.12.2
