@@ -17,7 +17,7 @@ class HealthInsurance:
         # 1.1. Rename Columns
         cols_old = ['id', 'Gender', 'Age', 'Driving_License', 'Region_Code',
        'Previously_Insured', 'Vehicle_Age', 'Vehicle_Damage', 'Annual_Premium',
-       'Policy_Sales_Channel', 'Vintage', 'Response']
+       'Policy_Sales_Channel', 'Vintage']
 
         snakecase = lambda x: inflection.underscore (x)
 
@@ -52,14 +52,14 @@ class HealthInsurance:
         df5['vintage'] = self.vintage_scaler.fit_transform( df5[['vintage']].values )
 
         # gender - One Hot Encoding / Target Encoding
-        df5 = pd.get_dummies( df5, prefix='gender', columns=['gender'] )
+        df5 = pd.get_dummies( df5, prefix='gender', columns=['gender'],dtype=int )
 
         # region_code - Target Encoding / Frequency Encoding
-        target_encode_region_code = df5.groupby( 'region_code' )['response'].mean()
+        target_encode_region_code = df5.groupby( 'region_code' ).size() / len(df5)
         df5.loc[:, 'region_code'] = df5['region_code'].map( target_encode_region_code )
 
         # vehicle_age - One Hot Encoding / Frequency Encoding
-        df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
+        df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'], dtype=int)
 
         # policy_sales_channel - Target Encoding / Frequency Encoding
         fe_policy_sales_channel = df5.groupby( 'policy_sales_channel' ).size() / len( df5 ) 
