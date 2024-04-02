@@ -88,9 +88,9 @@ Algumas métricas foram analisadas para estudar os modelos: Precision_at_k, Reca
 
 ### Precision_at_k (Precisão em k):
 
-A precisão at k mede a proporção de itens relevantes entre os k primeiros itens recomendados por um modelo. É útil quando estamos interessados na qualidade das recomendações feitas pelo modelo nos primeiros k itens.
+A Precision at k mede a proporção de itens relevantes entre os k primeiros itens recomendados por um modelo. É útil quando estamos interessados na qualidade das recomendações feitas pelo modelo nos primeiros k itens.
 
-#### Recall_at_k (Revocação em k):
+### Recall_at_k (Revocação em k):
 
 O Recall at k mede a proporção de itens relevantes que foram realmente recomendados entre os k primeiros itens recomendados por um modelo. É útil para avaliar o quão bem um modelo consegue capturar todos os itens relevantes em uma lista de recomendação. Por conta disso, é nossa métrica mais importante. Queremos saber o quanto o modelo consegue caputar nos primeiros 20% de ligações que serão realizadas para contatar os clientes.
 
