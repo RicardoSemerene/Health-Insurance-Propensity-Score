@@ -1,6 +1,6 @@
 # Health Insurance Propensity Score
 
-![imagem](img1.jpg)
+![imagem](img/img1.jpg)
 
 ---
 
@@ -36,7 +36,7 @@ As variáveis/atributos originais (e seus significados) do conjunto de dados sã
 
 A estratégia utilizada foi o método CRISP, dividido em 10 ações:
 
-![imagem](img2.png)
+![imagem](img/img2.png)
 
 1. Compreender o Problema de Negócio
 2. Coletar os dados
@@ -55,12 +55,12 @@ Durante a análise exploratória de dados, foram gerados insights ao time de neg
 
 #### H1. Pessoas idosas têm mais interesse na aquisição do seguro. 
 
-![imagem](img3.png)
+![imagem](img/img3.png)
 
 Hipótese Falsa. As pessoas mais interessadas (classe 1) em adquirir o seguro de veículo têm entre 35 e 50 anos.
 
 #### H2. Pessoas que já tiveram o veículo danificado têm interesse no seguro.
-![imagem](img4.png)
+![imagem](img/img4.png)
 
 Hipótese Falsa. A grande maioria das pessoas que já teve seu veículo danificado não tem interesse (classe 0) em adquirir o serviço de seguro 
 
@@ -118,7 +118,7 @@ Como visto acima, o LGBM Classifier apresentou Recall_at_20% de 58,8%. Isso sign
 
 A Cumulative Gains Curve (Curva de Ganhos Acumulados) é uma ferramenta de avaliação de modelo que mostra a taxa de sucesso acumulada ao classificar os exemplos positivos em comparação com uma classificação aleatória.
 
-![imagem](img5.png)
+![imagem](img/img5.png)
 
 Ou seja, podemos perceber pela curva laranja, que o "ganho" para 20% da base (primeiros 20% com maior propensão de compra) é alcançar 60% dos interessados (classe 1), comparativamente a curva traçejada (modelo randômico, sem uso de machine learning)
 
@@ -128,7 +128,7 @@ Obs: Para este modelo, se pudéssemos realizar contato com 50% da base, todos os
 
 A Lift Curve (Curva de Lift) é uma representação gráfica da proporção de resultados positivos em relação ao modelo baseline (aleatório). O eixo Y mostra quantas vezes o modelo desempenhou melhor que o modelo aleatório para um determinado número X de clientes contatados pelas ligações 
 
-![imagem](img6.png)
+![imagem](img/img6.png)
 
 Vemos, portanto, que para 20% da base de dados (primeiros 20% com maior propensão de compra), temos uma situação em que o modelo escolhido desempenha quase 3 vezes melhor que o modelo aleatório.
 
