@@ -64,7 +64,7 @@ Hipótese Falsa. As pessoas mais interessadas (classe 1) em adquirir o seguro de
 
 Hipótese Falsa. A grande maioria das pessoas que já teve seu veículo danificado não tem interesse (classe 0) em adquirir o serviço de seguro 
 
-#### H3. A maioria das pessoas interessadas tem carro há no máximo 1 ano.
+### H3. A maioria das pessoas interessadas tem carro há no máximo 1 ano.
 
 | vehicle_age      | response | count id |
 |------------------|----------|----------|
@@ -86,7 +86,7 @@ Em seguida, foram treinados 5 modelos de Aprendizado de Máquina com objetivo de
 
 Algumas métricas foram analisadas para estudar os modelos: Precision_at_k, Recall_at_k e Roc_auc
 
-#### Precision_at_k (Precisão em k):
+### Precision_at_k (Precisão em k):
 
 A precisão at k mede a proporção de itens relevantes entre os k primeiros itens recomendados por um modelo. É útil quando estamos interessados na qualidade das recomendações feitas pelo modelo nos primeiros k itens.
 
@@ -94,7 +94,7 @@ A precisão at k mede a proporção de itens relevantes entre os k primeiros ite
 
 O Recall at k mede a proporção de itens relevantes que foram realmente recomendados entre os k primeiros itens recomendados por um modelo. É útil para avaliar o quão bem um modelo consegue capturar todos os itens relevantes em uma lista de recomendação. Por conta disso, é nossa métrica mais importante. Queremos saber o quanto o modelo consegue caputar nos primeiros 20% de ligações que serão realizadas para contatar os clientes.
 
-#### Roc_auc (Área sob a curva ROC):
+### Roc_auc (Área sob a curva ROC):
 
 A área sob a curva ROC (Receiver Operating Characteristic) é uma medida da capacidade de separação de um modelo de classificação binária em diferentes limiares. Quanto maior a área sob a curva ROC, melhor o modelo é em distinguir entre as classes positiva e negativa. É uma métrica comum para avaliar a performance de modelos de classificação binária, como é o caso deste projeto.
 
@@ -110,11 +110,11 @@ Na tabela abaixo, o desempenho nessas métricas para os 5 modelos, considerando 
 
 Desta forma, foi escolhido para o modelo final o Light Gradient Boosting Machine Classifier, pois apresentou melhor desempenho para nossa base de dados.
 
-#### Recall_at_20% : 58,8%
+### Recall_at_20% : 58,8%
 
 Como visto acima, o LGBM Classifier apresentou Recall_at_20% de 58,8%. Isso significa que se contatarmos 20% de todos os atuais clientes da base para o seguro de saúde, alcançaremos 58,8% de todos os interessados em adquirir o novo seguro para veículos. Sem a utilização do modelo, de maneira aleatória, é esperado que em 20% de todos os clientes contatados, alcançaríamos apenas 20% de todos os interessados. Esses resultados podem ser melhor representados nos gráficos abaixo:
 
-#### Cumulative Gains Curve
+### Cumulative Gains Curve
 
 A Cumulative Gains Curve (Curva de Ganhos Acumulados) é uma ferramenta de avaliação de modelo que mostra a taxa de sucesso acumulada ao classificar os exemplos positivos em comparação com uma classificação aleatória.
 
@@ -124,7 +124,7 @@ Ou seja, podemos perceber pela curva laranja, que o "ganho" para 20% da base (pr
 
 Obs: Para este modelo, se pudéssemos realizar contato com 50% da base, todos os interessados em contratar um seguro seriam prospectados. 
 
-#### Lift Curve
+### Lift Curve
 
 A Lift Curve (Curva de Lift) é uma representação gráfica da proporção de resultados positivos em relação ao modelo baseline (aleatório). O eixo Y mostra quantas vezes o modelo desempenhou melhor que o modelo aleatório para um determinado número X de clientes contatados pelas ligações 
 
@@ -134,7 +134,7 @@ Vemos, portanto, que para 20% da base de dados (primeiros 20% com maior propens�
 
 # 6. Business Result
 
-#### Lista Rankeada por Propensão de Compra (LGBM Classifier)
+### Lista Rankeada por Propensão de Compra (LGBM Classifier)
 
 Em nossa base de dados, apenas 12,2% dos clientes da empresa responderam estar interessadas em adquirir um seguro veicular(response = 1). Assim, assumiremos este mesmo valor para os potenciais clientes que precisamos rankear:
 
@@ -144,13 +144,13 @@ Assim, nas primeiras 25.400 ligações (primeiros 20% com maior propensão de co
 
 58,8% de 15.500 = 9.114 clientes farão a compra
 
-#### Lista Aleatória
+### Lista Aleatória
 
 Na lista aleatória, nas primeiras 25.400 ligações (primeiros 20% com maior propensão de compra), 20% dos clientes interessados serão alcançados:
 
 20% de 15.500 = 3.100 clientes farão a compra
 
-#### Resultado Final
+### Resultado Final
 
 O Ticket médio na Effective Insurance para o seguro de veículo será de US $ 1700,00 por ano e o custo para prospectar cada cliente é de aproximadamente 10 dólares em média. 
 Então, teremos um custo de 25.400 * 10 = US $254.000 
